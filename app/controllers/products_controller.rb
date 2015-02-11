@@ -11,6 +11,7 @@ class ProductsController < ApplicationController
   def show
     respond_with(@product)
   end
+ 
 
   def new
     @product = Product.new
@@ -42,6 +43,6 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      params.require(:product).permit(:category, :name, :description, :price, :quantity)
+      params.require(:product).permit(:category, :name, :description, :price, :quantity, :user_id)
     end
 end

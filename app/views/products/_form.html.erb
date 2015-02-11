@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <div class="field-invisible">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id, value: current_user.id %>
+  </div>
   <div class="field">
     <%= f.label :category %><br>
     <%= f.text_field :category %>
